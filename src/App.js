@@ -12,6 +12,7 @@ import Login from './components/Login';
 import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebaseConfige";
+import Footer from './components/Footer';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <React.Fragment>
             <Header signUserOut={signUserOut} isAuth={isAuth}/>
             <Home isAuth={isAuth}/>
+            <Footer />
           </React.Fragment>
         } />
 
@@ -55,6 +57,7 @@ function App() {
           <React.Fragment>
           <Header signUserOut={signUserOut} isAuth={isAuth}/>
           <Donate isAuth={isAuth}/>
+          <Footer />
           </React.Fragment>
         }/>
 
@@ -62,6 +65,7 @@ function App() {
           <React.Fragment>
           <Header signUserOut={signUserOut} isAuth={isAuth}/>
           <Foodlist isAuth={isAuth}/>
+          <Footer />
           </React.Fragment>
         }/>
         <Route path="/login" element={
