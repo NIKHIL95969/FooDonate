@@ -74,7 +74,7 @@ export default function Donate({isAuth}) {
               className='input_filled_donate_location'
               placeholder="imaegUrl.."
               onChange={(event) => {
-                setLocation(event.target.value);
+                setImageUrl(event.target.value);
               }}
             />
           </div>
