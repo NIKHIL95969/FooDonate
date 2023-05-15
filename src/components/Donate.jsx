@@ -9,7 +9,7 @@ export default function Donate({isAuth}) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
   const [location, setLocation] = useState("");
-  const [imaegUrl, setImageUrl] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   
   const postsCollectionRef = collection(db, "posts");
   let navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function Donate({isAuth}) {
       title,
       postText,
       location,
-      imaegUrl,
+      imageUrl,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
     navigate("/");

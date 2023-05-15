@@ -21,6 +21,8 @@ export default function Foodlist({isAuth}) {
       await deleteDoc(postDoc);
     }
   };
+
+
   
   useEffect(() => {
     const getPosts = async () => {
@@ -42,20 +44,22 @@ export default function Foodlist({isAuth}) {
     <div className='Foodlist_container'>
        {postLists.map((post) => {
         return (
-          <Card style={{ width: '18rem' }}>
-            <Card.Img style={{ width: 'inherit' }} variant="top" src="https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_640.jpg" />
-            <Card.Body>
-              <Card.Title>{post.title}</Card.Title>
-              <Card.Text>
+          <Card className='card_post' style={{ width: '18rem' }}>
+            <Card.Img style={{ width: 'inherit' }} variant="top" src={post.imageUrl}/>
+            <Card.Body className='card_body'>
+              <Card.Title className='post_title'>{post.title}</Card.Title>
+              <Card.Text className='post_subtitle'>
                 {post.postText}
               </Card.Text>
-              <Card.Title>{post.location}</Card.Title>
+              <Card.Title className='post_location'>Location - {post.location}</Card.Title>
+              <Card.Title className='post_by'>@{post.author.name}</Card.Title>
               <div className="card_btns">
-                <Button variant="primary">Need</Button>
+                <Button className='need_btn' variant="primary">Need</Button>
                 { 
                 auth ? 
                   isAuth && (post.author.id === auth.currentUser.uid) ? (
                     <button
+                      className='delete_post_btn'
                       onClick={() => { deletePost(post.id); }}>Delete
                     </button>
                     ) : "" 
