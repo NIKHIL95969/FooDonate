@@ -1,0 +1,8 @@
+.Foodlist_container {
+    padding-top: 80px;
+    margin: 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 60px;
+}

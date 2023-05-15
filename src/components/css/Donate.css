@@ -1,0 +1,17 @@
+.donate_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15%;
+    height: 100vh;
+}
+
+.createPostPage {
+    background-color: gray;
+    width: 60vw;
+    padding: 40px;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

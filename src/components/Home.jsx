@@ -1,9 +1,13 @@
 import React from 'react'
 import './css/Home.css'
+import Foodlist from './Foodlist'
+import { Link } from 'react-router-dom'
 
 // import { foodimage1 } from ''
 
 export default function Home() {
+
+
   return (
     <React.Fragment>
       <div className="home_section">
@@ -15,6 +19,7 @@ export default function Home() {
           <h3>Foodlist</h3>
         </div>
       </div>
+      <Foodlist />
     </React.Fragment>
   )
 }

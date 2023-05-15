@@ -19,7 +19,7 @@ export default function Header({ signUserOut, isAuth }) {
                 <li><Link to="/foodlist"> Foodlist </Link></li>
             </ul>
             <button className={!isAuth ? "logout_hide" : "logout_btn"} onClick={signUserOut}> Log Out</button>
-            <Link to="/login"> 
+            <Link to="/login" > 
                 <div className="profilelogo">
                     N
                 </div>

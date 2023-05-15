@@ -41,6 +41,10 @@
     text-decoration: none;
 }
 
+.nav-bar a {
+    text-decoration: none;
+}
+
 .logout_hide {
     display: none;
 }
