@@ -1,3 +1,17 @@
 .Login_section {
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
+
+.login_container {
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+

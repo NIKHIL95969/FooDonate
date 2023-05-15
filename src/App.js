@@ -9,33 +9,31 @@ import Login from './components/Login';
 // import Home from './Pages/Home'
 // import CreatePost from './Pages/CreatePost'
 // import Login from './Pages/Login'
-// import { useState } from "react";
-// import { signOut } from "firebase/auth";
-// import { auth } from "./firebase-config";
+import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "./firebaseConfige";
 
 
 function App() {
-  // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-
-  // const signUserOut = () => {
-  //   signOut(auth).then(() => {
-  //     localStorage.clear();
-  //     setIsAuth(false);
-  //     window.location.pathname = "/login";
-  //   });
-  // };
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  console.log(isAuth);
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+      // window.location.pathname = "/login";
+    });
+  };
 
   return (
     <Router>
       {/* <nav>
-        <Link to="/"> Home </Link>
-
         {!isAuth ? (
-          <Link to="/login"> Login </Link>
+          <Link to="/login"></Link>
         ) : (
           <>
-            <Link to="/createpost"> Create Post </Link>
-            <button onClick={signUserOut}> Log Out</button>
+            <Link to="/"></Link>
+            
           </>
         )}
       </nav> */}
@@ -44,7 +42,7 @@ function App() {
 
         <Route path="/" element={
           <React.Fragment>
-            <Header />
+            <Header signUserOut={signUserOut} isAuth={isAuth}/>
             <Home />
           </React.Fragment>
         } />
@@ -64,7 +62,7 @@ function App() {
         }/>
         <Route path="/login" element={
           <React.Fragment>
-          <Login />
+          <Login setIsAuth={setIsAuth}/>
           </React.Fragment>
         }/>
         {/* <Route path="/" element={<Home isAuth={isAuth} />} />

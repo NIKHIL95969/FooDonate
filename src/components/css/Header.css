@@ -41,6 +41,19 @@
     text-decoration: none;
 }
 
+.logout_hide {
+    display: none;
+}
+
+.logout_btn {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.667);
+    text-decoration: none;
+}
+
 .profilelogo {
     width: 45px;
     height: 45px;
@@ -52,6 +65,7 @@
     font-weight: 700;
     color: #000000bd;
     background: #d6d6d6;
+    text-decoration: none;
     /* -webkit-text-stroke: 1px #282828; */
     text-shadow: 2px 2px 2px #a9a9a9;
     align-items: center;
