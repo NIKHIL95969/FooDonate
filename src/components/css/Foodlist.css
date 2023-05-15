@@ -1,0 +1,78 @@
+.Foodlist_container {
+    padding-top: 80px;
+    margin: 0 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 60px;
+}
+
+.food_card {
+    box-shadow: 2px 2px 2px gray, 0px 0px 2px 2px gray;
+}
+
+.post_title {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.post_subtitle {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: gray;
+}
+
+.post_by {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.card_post {
+    width: 18rem;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #8080804a;
+}
+
+.card_body {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card_btns {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.need_btn {
+    width: 10vw;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-style: none;
+    background: #06d906;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.delete_post_btn {
+    width: 10vw;
+    font-size: 18px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    color: white;
+    background: #d90606;
+    box-shadow: 2px 2px 2px gray;
+}

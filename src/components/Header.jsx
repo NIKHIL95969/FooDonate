@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import  './css/Header.css'
 
-export default function Header() {
+export default function Header({ signUserOut, isAuth }) {
+    
   return (
     <header className='header'>
         <div className="logo">FooDonate</div>
@@ -17,8 +18,8 @@ export default function Header() {
                 <li><Link to="/donate"> Donate </Link></li>
                 <li><Link to="/foodlist"> Foodlist </Link></li>
             </ul>
-            <Link to="/login"> 
-            
+            <button className={!isAuth ? "logout_hide" : "logout_btn"} onClick={signUserOut}> Log Out</button>
+            <Link to="/login" > 
                 <div className="profilelogo">
                     N
                 </div>

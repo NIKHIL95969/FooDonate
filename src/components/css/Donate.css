@@ -1,0 +1,70 @@
+.donate_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15%;
+    height: 100vh;
+}
+
+.createPostPage {
+    
+    background-color: #e8e8e8b0;
+    box-shadow: 2px 2px 2px gray;
+    width: 64vw;
+    padding: 40px;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cpContainer {
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+}
+.inputGp {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_filled_donate {
+    width: 60vw;
+    height: 30px;
+    border-style: none;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.input_filled_donate_post {
+    width: 60vw;
+    height: 15vh;
+    border-style: none;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.input_filled_donate_location {
+    width: 60vw;
+    height: 30px;
+    border-style: none;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.donate-btn {
+    width: 30vw;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #0fe500;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+    box-shadow: 2px 2px 2px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
