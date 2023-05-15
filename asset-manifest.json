@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FooDonate/static/css/main.3c731860.css",
+    "main.js": "/FooDonate/static/js/main.941b8e95.js",
+    "static/js/787.75ece02b.chunk.js": "/FooDonate/static/js/787.75ece02b.chunk.js",
+    "index.html": "/FooDonate/index.html",
+    "main.3c731860.css.map": "/FooDonate/static/css/main.3c731860.css.map",
+    "main.941b8e95.js.map": "/FooDonate/static/js/main.941b8e95.js.map",
+    "787.75ece02b.chunk.js.map": "/FooDonate/static/js/787.75ece02b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c731860.css",
+    "static/js/main.941b8e95.js"
+  ]
+}
