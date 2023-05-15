@@ -44,7 +44,15 @@
 .nav-bar a {
     text-decoration: none;
 }
-
+.nav_donate_btn {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00AE31;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px gray;
+}
 .logout_hide {
     display: none;
 }

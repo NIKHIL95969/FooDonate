@@ -15,7 +15,7 @@ export default function Header({ signUserOut, isAuth }) {
         <nav className="nav-bar" id="nav-bar">
             <ul className="nav-bar">
                 <li><Link to="/"> Home </Link></li>
-                <li><Link to="/donate"> Donate </Link></li>
+                <li className='nav_donate_btn'><Link to="/donate"> Donate </Link></li>
                 <li><Link to="/foodlist"> Foodlist </Link></li>
             </ul>
             <button className={!isAuth ? "logout_hide" : "logout_btn"} onClick={signUserOut}> Log Out</button>
