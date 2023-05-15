@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 
-export default function Foodlist(isAuth) {
+export default function Foodlist({isAuth}) {
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts");
 
@@ -24,8 +24,13 @@ export default function Foodlist(isAuth) {
   
   useEffect(() => {
     const getPosts = async () => {
-      const data = await getDocs(postsCollectionRef);
-      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      if(!isAuth){
+        window.location.pathname = "/login";
+      }
+      else{
+        const data = await getDocs(postsCollectionRef);
+        setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      }
     };
 
     getPosts();

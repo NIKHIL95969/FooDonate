@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 // import { foodimage1 } from ''
 
-export default function Home() {
+export default function Home({isAuth}) {
 
 
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           <h3>Foodlist</h3>
         </div>
       </div>
-      <Foodlist />
+      {isAuth?<Foodlist isAuth={isAuth}/> : ""}
     </React.Fragment>
   )
 }

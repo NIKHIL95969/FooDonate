@@ -6,3 +6,7 @@
     justify-content: space-evenly;
     row-gap: 60px;
 }
+
+.food_card {
+    box-shadow: 2px 2px 2px gray, 0px 0px 2px 2px gray;
+}
