@@ -1,0 +1,26 @@
+
+.footer_section {
+    box-shadow: 1px 1px 1px gray;
+    width: auto;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15%;
+    background-color: rgb(5, 5, 26);
+}
+
+.site_logo {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00AE31;
+    -webkit-text-stroke: 0px #e5e1e1;
+    /* text-shadow: 3px 0px 1px #cececed4; */
+}
+
+.copyright_heading {
+    font-size: 30px;
+    color: wheat;
+    color: white;
+}
