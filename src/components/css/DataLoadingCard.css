@@ -1,0 +1,87 @@
+/* .DataLoadingFrame {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 80px;
+    margin: 0 15%;
+    row-gap: 60px;
+    
+} */
+
+
+.LoadingContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 514px;
+    background-color: rgba(72, 72, 72, 0.09);
+    row-gap: 10px;
+    margin-bottom: 20px;
+    /* margin-right: 2px; */
+}
+.imageloading {
+    /* min-width: 228px; */
+    width: 288px;
+    max-width: 320px;
+    height: 191px;
+    background-color: rgba(3, 2, 10, 0.09);
+    border-radius: 4px;
+
+}
+
+.titleloading {
+    width: 186px;
+    height: 28px;
+    background-color: rgba(3, 2, 10, 0.09);
+    border-radius: 2px;
+}
+
+.discLoading { 
+    /* width: 319px; */
+    height: 10px;
+    background-color: rgba(3, 2, 10, 0.09);
+    border-radius: 2px;
+}
+
+.locationLoading {
+    margin-top: 20px;
+    width: 186px;
+    height: 28px;
+    background-color: rgba(3, 2, 10, 0.09);
+    border-radius: 2px;
+}
+
+.btnLoading {
+    width: 144px;
+    height: 28px;
+    background-color: rgba(3, 2, 10, 0.09);
+    border-radius: 2px;
+
+}
+
+
+/* SkeletonComponent.css */
+
+.skeleton {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    animation: loadingAnimation 1s infinite alternate;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+
+/* media queries */
+
+@media (max-width: 1100px) {
+    
+
+
+}

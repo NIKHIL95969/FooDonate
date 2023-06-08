@@ -6,10 +6,12 @@ import { auth, db } from "../firebaseConfige";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import DataLoadingCard from './DataLoadingCard';
 
 
 export default function Foodlist({isAuth}) {
   const [postLists, setPostList] = useState([]);
+  const [isloading, setLoading] = useState(true);
   const postsCollectionRef = collection(db, "posts");
 
   const deletePost = async (id) => {
@@ -25,24 +27,40 @@ export default function Foodlist({isAuth}) {
 
   
   useEffect(() => {
-    const getPosts = async () => {
-      if(!isAuth){
-        window.location.pathname = "/login";
-      }
-      else{
-        const data = await getDocs(postsCollectionRef);
-        setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      }
-    };
+    
 
-    getPosts();
+
+    const timer = setTimeout(() => {
+      // Code to be executed after 2 seconds
+      // Add your logic here
+
+      const getPosts = async () => {
+        if(!isAuth){
+          window.location.pathname = "/login";
+        }
+        else{
+          const data = await getDocs(postsCollectionRef);
+          setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+          setLoading(false);
+        }
+      };
+  
+      getPosts();
+
+      
+    }, 2000);
+
+    // Cleanup function to clear the timer if the component unmounts or the effect re-runs
+    return () => clearTimeout(timer);
   }, [deletePost]);
 
   console.log(postLists)
 
   return (
     <div className='Foodlist_container'>
-       {postLists.map((post) => {
+      { !isloading ? 
+       
+      (  postLists.map((post) => {
         return (
           <Card className='card_post' style={{ width: '18rem' }}>
             <Card.Img style={{ width: 'inherit' }} variant="top" src={post.imageUrl}/>
@@ -70,7 +88,12 @@ export default function Foodlist({isAuth}) {
             </Card.Body>
           </Card>
         );
-      })}
+      }))
+      
+    //  if not then
+    :
+    <DataLoadingCard/>
+    }
     </div>
   )
 }
